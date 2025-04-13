@@ -1,17 +1,39 @@
-# Web-Gizi-Balita
-
-Installation Guide
-1. 🧑‍💻 Clone the Repository
-bash
-Copy
-Edit
+# 🌱 Web-Gizi-Balita
+## 🚀 Installation Guide
+## 1. 🧑‍💻 Clone the Repository
+```bash
 git clone https://github.com/your-username/webgizibalita.git
 cd webgizibalita
-2. 🌐 Backend Setup (Python + Flask)
-a. Create and activate a virtual environment:
-bash
-Copy
-Edit
+```
+## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) &(Python)
+**a. Install PHP (for CodeIgniter 4)**
+Make sure you have PHP (v7.4 or above) installed
+```bash
+php -v
+```
+If PHP isn't installed, download it from the [official website](https://www.php.net/).
+
+**b. Install Python (if you installed it already, skip this)**
+1. Download Python
+- Go to the official [Python website](https://www.python.org/downloads/)
+- Download the version of Python that is suitable for your operating system (Windows, macOS, Linux):
+
+  - Windows: Download the installer for Windows.
+
+  - macOS: Python comes pre-installed, but you can download a newer version if necessary.
+
+  - Linux: Python is often pre-installed on Linux, but you can install it via the terminal if needed.
+
+2. Install Python
+- Windows:
+  - Run the downloaded installer.
+
+  - Ensure that you check the box labeled Add Python to **PATH** during installation.
+
+  - Click Install Now.
+
+**c. Create and activate a virtual environment:**
+```bash
 # On Windows
 python -m venv venv
 venv\Scripts\activate
@@ -19,36 +41,27 @@ venv\Scripts\activate
 # On macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
-b. Install Python dependencies:
-bash
-Copy
-Edit
+```
+**d. Install Python dependencies:**
+```bash
 pip install -r requirements.txt
-3. 🎨 Frontend Setup (Tailwind CSS)
-bash
-Copy
-Edit
+```
+## 3. 🎨 Frontend Setup (Tailwind CSS)
+```bash
 # Install Node.js dependencies
 npm install
-4. 🛠️ Build Tailwind CSS
+```
+## 4. 🛠️ Build Tailwind CSS
 While developing, you can run Tailwind in watch mode:
-
-bash
-Copy
-Edit
+```bash
 npm run build
+```
 This will watch for CSS changes and output the compiled file to ./public/css/main.css.
-
-5. 🏃 Run the App
-Depending on your app’s structure (e.g., app.py or main.py), you can start the backend server like this:
-
-bash
-Copy
-Edit
-flask run
-Or, if you're using Gunicorn in production:
-
-bash
-Copy
-Edit
-gunicorn app:app
+## 5. 🏃 Run the App
+because this app use CodeIgniter4 and Python, you need to run 2 command on different terminal:
+```bash
+php spark serve
+```
+```bash
+python app/Python/app.py
+```
