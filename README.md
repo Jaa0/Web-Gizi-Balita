@@ -1,68 +1,80 @@
-# CodeIgniter 4 Application Starter
+# 🌱 Web-Gizi-Balita
+## 🚀 Installation Guide
+## 1. 🧑‍💻 Clone the Repository
+```bash
+git clone https://github.com/your-username/web-gizi-balita.git
+cd web-gizi-balita
+```
+## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) & (Python)
+**A. Install PHP (for CodeIgniter 4)**
+Make sure you have PHP (v7.4 or above) installed
+```bash
+php -v
+```
+If PHP isn't installed, download it from the [official website](https://www.php.net/).
 
-## What is CodeIgniter?
+**B. Install Composer**
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Download the Composer installer from [Composer](https://getcomposer.org/Composer-Setup.exe)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+**C. Install Composer**
+```bash
+composer install
+```
+**D. Install Python (if you installed it already, skip this)**
+1. Download Python
+- Go to the official [Python website](https://www.python.org/downloads/)
+- Download the version of Python that is suitable for your operating system (Windows, macOS, Linux):
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+  - Windows: Download the installer for Windows.
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+  - macOS: Python comes pre-installed, but you can download a newer version if necessary.
 
-## Installation & updates
+  - Linux: Python is often pre-installed on Linux, but you can install it via the terminal if needed.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+2. Install Python
+- Windows:
+  - Run the downloaded installer.
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+  - Ensure that you check the box labeled Add Python to **PATH** during installation.
 
-## Setup
+  - Click Install Now.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+3. Check on terminal if Python has Successfully Downloaded
+```bash
+python --version
+```
 
-## Important Change with index.php
+**E. Create and activate a virtual environment:**
+```bash
+# On Windows
+python -m venv venv
+venv\Scripts\activate
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+# On macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+**F. Install Python dependencies:**
+```bash
+pip install -r requirements.txt
+```
+## 3. 🎨 Frontend Setup (Tailwind CSS)
+```bash
+# Install Node.js dependencies
+npm install
+```
+## 4. 🛠️ Build Tailwind CSS
+While developing, you can run Tailwind in watch mode:
+```bash
+npm run build
+```
+This will watch for CSS changes and output the compiled file to ./public/css/main.css.
+## 5. 🏃 Run the App
+because this app use CodeIgniter4 and Python, you need to run 2 command on different terminal:
+```bash
+php spark serve
+```
+```bash
+python app/Python/app.py
+```
