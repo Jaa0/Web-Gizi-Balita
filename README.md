@@ -5,15 +5,23 @@
 git clone https://github.com/your-username/webgizibalita.git
 cd webgizibalita
 ```
-## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) &(Python)
-**a. Install PHP (for CodeIgniter 4)**
+## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) & (Python)
+**A. Install PHP (for CodeIgniter 4)**
 Make sure you have PHP (v7.4 or above) installed
 ```bash
 php -v
 ```
 If PHP isn't installed, download it from the [official website](https://www.php.net/).
 
-**b. Install Python (if you installed it already, skip this)**
+**B. Install Composer**
+
+Download the Composer installer from [Composer](https://getcomposer.org/Composer-Setup.exe)
+
+**C. Install Composer**
+```bash
+composer install
+```
+**D. Install Python (if you installed it already, skip this)**
 1. Download Python
 - Go to the official [Python website](https://www.python.org/downloads/)
 - Download the version of Python that is suitable for your operating system (Windows, macOS, Linux):
@@ -32,7 +40,12 @@ If PHP isn't installed, download it from the [official website](https://www.php.
 
   - Click Install Now.
 
-**c. Create and activate a virtual environment:**
+3. Check on terminal if Python has Successfully Downloaded
+```bash
+python --version
+```
+
+**E. Create and activate a virtual environment:**
 ```bash
 # On Windows
 python -m venv venv
@@ -42,7 +55,7 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 ```
-**d. Install Python dependencies:**
+**F. Install Python dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
