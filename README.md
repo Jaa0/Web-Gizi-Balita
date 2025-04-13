@@ -2,8 +2,8 @@
 ## 🚀 Installation Guide
 ## 1. 🧑‍💻 Clone the Repository
 ```bash
-git clone https://github.com/your-username/webgizibalita.git
-cd webgizibalita
+git clone https://github.com/your-username/web-gizi-balita.git
+cd web-gizi-balita
 ```
 ## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) & (Python)
 **A. Install PHP (for CodeIgniter 4)**
