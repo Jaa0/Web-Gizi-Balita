@@ -2,7 +2,7 @@
 ## 🚀 Installation Guide
 ## 1. 🧑‍💻 Clone the Repository
 ```bash
-git clone https://github.com/your-username/web-gizi-balita.git
+git clone https://github.com/Jaa0/Web-Gizi-Balita.git
 cd web-gizi-balita
 ```
 ## 2. 🌐 Backend Setup (CodeIgniter4 + PHP) & (Python)
