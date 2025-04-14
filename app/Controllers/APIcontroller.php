@@ -30,9 +30,9 @@ class APIcontroller extends Controller
                 'label' => 'Nomor Induk Kependudukan (NIK)',
                 'rules' => 'required|exact_length[16]|numeric',
                 'errors' => [
-                    'required' => 'NIK harus diisi.',
-                    'exact_length' => 'NIK harus terdiri dari 16 digit.',
-                    'numeric' => 'NIK harus berupa angka.'
+                    'required' => 'NIK harus diisi',
+                    'exact_length' => 'NIK harus terdiri dari 16 digit',
+                    'numeric' => 'NIK harus berupa angka'
                 ]
             ],
             'namaIbu' => [
@@ -53,34 +53,34 @@ class APIcontroller extends Controller
                 'label' => 'Tanggal Lahir',
                 'rules' => 'required|valid_date',
                 'errors' => [
-                    'required' => 'Tanggal lahir harus diisi.',
+                    'required' => 'Tanggal lahir harus diisi',
                 ]
             ],
             'gender' => [
                 'label' => 'Gender',
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Pilih salah satu gender.'
+                    'required' => 'Pilih salah satu gender'
                 ]
             ],
             'height' => [
                 'label' => 'Tinggi Badan',
                 'rules' => 'required|numeric|greater_than_equal_to[40]|less_than_equal_to[150]',
                 'errors' => [
-                    'required' => 'Tinggi badan harus diisi.',
-                    'numeric' => 'Tinggi badan harus berupa angka.',
-                    'greater_than_equal_to' => 'Tinggi badan minimal 40 cm.',
-                    'less_than_equal_to' => 'Tinggi badan maksimal 150 cm.'
+                    'required' => 'Tinggi badan harus diisi',
+                    'numeric' => 'Tinggi badan harus berupa angka',
+                    'greater_than_equal_to' => 'Tinggi badan minimal 40 cm',
+                    'less_than_equal_to' => 'Tinggi badan maksimal 150 cm'
                 ]
             ],
             'weight' => [
                 'label' => 'Berat Badan',
                 'rules' => 'required|numeric|greater_than_equal_to[3]|less_than_equal_to[50]',
                 'errors' => [
-                    'required' => 'Berat badan harus diisi.',
-                    'numeric' => 'Berat badan harus berupa angka.',
-                    'greater_than_equal_to' => 'Berat badan minimal 3 kg.',
-                    'less_than_equal_to' => 'Berat badan maksimal 50 kg.'
+                    'required' => 'Berat badan harus diisi',
+                    'numeric' => 'Berat badan harus berupa angka',
+                    'greater_than_equal_to' => 'Berat badan minimal 3 kg',
+                    'less_than_equal_to' => 'Berat badan maksimal 50 kg'
                 ]
             ],
         ]);
