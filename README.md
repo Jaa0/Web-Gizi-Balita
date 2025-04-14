@@ -1,4 +1,4 @@
-# 🌱 Web-Gizi-Balita
+# 🌱 Web Gizi Balita
 ## 🚀 Installation Guide
 ## 1. 🧑‍💻 Clone the Repository
 ```bash
