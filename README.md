@@ -17,7 +17,7 @@ If PHP isn't installed, download it from the [official website](https://www.php.
 
 Download the Composer installer from [Composer](https://getcomposer.org/Composer-Setup.exe)
 
-**C. Install Composer**
+**C. Install CodeIgniter Dependencies**
 ```bash
 composer install
 ```
@@ -45,7 +45,7 @@ composer install
 python --version
 ```
 
-**E. Create and activate a virtual environment:**
+**E. Create and activate a virtual environment (Optional)**
 ```bash
 # On Windows
 python -m venv venv
