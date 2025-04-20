@@ -72,6 +72,9 @@
                 ]) ?>
                 <div style="color: red;" class="text-sm lg:text-[18px]">
                     <?= isset($validation) ? $validation->getError('birthdate') : '' ?>
+                    <?php if (isset($age_error)) : ?>
+                        <div style="color: red;" class="text-sm lg:text-[18px]"><?= $age_error ?></div>
+                    <?php endif; ?>
                 </div>
             </div>
 

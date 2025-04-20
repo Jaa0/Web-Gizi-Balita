@@ -64,9 +64,9 @@ def predict():
 
         height = float(data["height"])
         weight = float(data["weight"])
-        if not (40 <= height <= 150):
-            return jsonify({"error": "Height must be between 40 and 150 cm."}), 400
-        if not (3 <= weight <= 50):
+        if not (40 <= height <= 120):
+            return jsonify({"error": "Height must be between 40 and 120 cm."}), 400
+        if not (2.5 <= weight <= 40):
             return jsonify({"error": "Weight must be between 3 and 50 kg."}), 400
 
         # Calculate age in months

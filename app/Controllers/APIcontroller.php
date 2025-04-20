@@ -65,22 +65,22 @@ class APIcontroller extends Controller
             ],
             'height' => [
                 'label' => 'Tinggi Badan',
-                'rules' => 'required|numeric|greater_than_equal_to[40]|less_than_equal_to[150]',
+                'rules' => 'required|numeric|greater_than_equal_to[40]|less_than_equal_to[120]',
                 'errors' => [
                     'required' => 'Tinggi badan harus diisi',
                     'numeric' => 'Tinggi badan harus berupa angka',
                     'greater_than_equal_to' => 'Tinggi badan minimal 40 cm',
-                    'less_than_equal_to' => 'Tinggi badan maksimal 150 cm'
+                    'less_than_equal_to' => 'Tinggi badan maksimal 120 cm'
                 ]
             ],
             'weight' => [
                 'label' => 'Berat Badan',
-                'rules' => 'required|numeric|greater_than_equal_to[3]|less_than_equal_to[50]',
+                'rules' => 'required|numeric|greater_than_equal_to[2.5]|less_than_equal_to[40]',
                 'errors' => [
                     'required' => 'Berat badan harus diisi',
                     'numeric' => 'Berat badan harus berupa angka',
-                    'greater_than_equal_to' => 'Berat badan minimal 3 kg',
-                    'less_than_equal_to' => 'Berat badan maksimal 50 kg'
+                    'greater_than_equal_to' => 'Berat badan minimal 2.5 kg',
+                    'less_than_equal_to' => 'Berat badan maksimal 40 kg'
                 ]
             ],
         ]);
@@ -108,6 +108,15 @@ class APIcontroller extends Controller
         $ageYears = $ageInterval->y;
         $ageMonths = $ageInterval->m;
         $ageDays = $ageInterval->d;
+
+        // Age validation: must not be older than 5 years
+        if ($ageYears > 5 || ($ageYears === 5 && ($ageMonths > 0 || $ageDays > 0))) {
+            return view('Create', [
+                'current_date' => date('Y-m-d'),
+                'validation' => $validation,
+                'age_error' => 'Umur balita tidak boleh lebih dari 5 tahun'
+            ]);
+        }
 
         // Prepare data for API
         $inputData = [
